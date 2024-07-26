@@ -29,6 +29,35 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+	#header .logo {
+		width: 5.5rem; /* 88px */
+		height: 5.5rem; /* 88px */
+		line-height: 5.5rem;
+		border: solid 1px #ffffff;
+		border-radius: 100%; /* Ensures the container is circular */
+		overflow: hidden; /* Hide overflow to ensure circular shape */
+		display: flex; /* Center the image */
+		align-items: center; /* Center the image */
+		justify-content: center; /* Center the image */
+	}
+	
+	/* New CSS for the image */
+	.logo-image {
+		width: 100%; /* Fill the container */
+		height: 100%; /* Fill the container */
+		border-radius: 50%; /* Make the image circular */
+		object-fit: cover; /* Ensure the image covers the container */
+	}
+	
+	/* Responsive adjustments for smaller screens */
+	@media screen and (max-width: 736px) {
+		#header .logo {
+			width: 4.75rem; /* Adjusted for smaller screens */
+			height: 4.75rem; /* Adjusted for smaller screens */
+			line-height: 4.75rem;
+		}
+	}
+
 body {
 	line-height: 1;
 }
@@ -1140,9 +1169,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
